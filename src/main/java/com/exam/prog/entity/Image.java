@@ -24,7 +24,7 @@ public class Image {
     @Column(name = "email")
     private String email;
 
-    @CreationTimestamp 
+    @CreationTimestamp
     @Column(name = "created_at")
     private Instant createdAt;
 }

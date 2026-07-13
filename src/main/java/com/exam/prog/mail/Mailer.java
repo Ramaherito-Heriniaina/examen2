@@ -45,7 +45,7 @@ public class Mailer implements Consumer<Email> {
     }
   }
 
-  private void send(Email email) throws MessagingException, IOException {
+  public void send(Email email) throws MessagingException, IOException {
     var session = Session.getDefaultInstance(new Properties());
     var mimeMessage = toMimeMessage(session, email);
     mimeMessage.setContent(toMimeMultipart(email));
@@ -108,4 +108,8 @@ public class Mailer implements Consumer<Email> {
       throw new RuntimeException(e);
     }
   }
+
+    public void send(String email, String votreImage, String imageTraitéeAvecSuccès) {
+
+    }
 }
